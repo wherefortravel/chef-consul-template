@@ -11,8 +11,8 @@ ExecStart=<%= @command %> <%= @options %>
 ExecReload=/bin/kill -HUP $MAINPID
 ExecStop=/bin/kill -INT $MAINPID
 KillMode=process
-Restart=on-failure
-RestartSec=42s
+Restart=always
+RestartSec=2s
 
 [Install]
 WantedBy=multi-user.target
